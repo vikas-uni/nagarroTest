@@ -1,2 +1,0 @@
-# myRepo
-test repository

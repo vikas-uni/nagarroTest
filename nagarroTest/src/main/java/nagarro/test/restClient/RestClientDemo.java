@@ -59,9 +59,6 @@ public class RestClientDemo {
 			JSONObject ob = new JSONObject();
 			ob.put("Response", json);
 
-			//System.out.println("Output from Server .... \n");
-			//System.out.println(output);
-
 			return ob;
 		} catch (ParseException pex) {
 			JSONObject ob = new JSONObject();

@@ -16,7 +16,7 @@ public class JDBCDemo {
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "root", "root@123");
 		} catch (ClassNotFoundException e) {
 
-			LOGGER.severe("Error Loading Class: " + e);
+			LOGGER.severe("Error! Class not loaded: " + e);
 
 		} catch (SQLException e) {
 			LOGGER.severe("Error getting connection: " + e);

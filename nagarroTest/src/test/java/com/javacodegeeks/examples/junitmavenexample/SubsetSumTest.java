@@ -24,6 +24,16 @@ public class SubsetSumTest {
 	}
 	
 	@Test
+	public void testHasSum_existsOneNeg() {
+		assertTrue(subsetSum.hasSum(getTestArrayOneNeg(), -3));
+	}
+	
+	@Test
+	public void testHasSum_existsTwoNeg() {
+		assertTrue(subsetSum.hasSum(getTestArrayTwoNeg(), -9));
+	}
+	
+	@Test
 	public void testHasSum_notExists() {
 		assertFalse(subsetSum.hasSum(getTestArray(), 1235));
 	}
@@ -36,6 +46,16 @@ public class SubsetSumTest {
 	
 	private int[] getTestArray() {
 		int[] arr = {3, 34, 4, 12, 5, 2};
+		return arr;
+	}
+	
+	private int[] getTestArrayOneNeg() {
+		int[] arr = {3, 34, 4, 12, -5, 2};
+		return arr;
+	}
+	
+	private int[] getTestArrayTwoNeg() {
+		int[] arr = {3, 34, -4, 12, -5, 2};
 		return arr;
 	}
 	

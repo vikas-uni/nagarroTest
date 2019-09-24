@@ -40,7 +40,7 @@ public class JDBCDemo {
 
 			i = ps.executeUpdate();
 			con.close();
-			LOGGER.info("i + \" Records Updated successfully\"");
+			LOGGER.info(i + " Records Updated successfully");
 			return i + " Records Updated successfully";
 
 		} catch (SQLException e) {

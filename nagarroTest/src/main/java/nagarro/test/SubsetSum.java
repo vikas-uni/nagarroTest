@@ -4,7 +4,7 @@ public class SubsetSum {
 
 	public boolean hasSum(int[] intArr, int sum) {	
 		
-		return subsetSum(intArr, intArr.length, sum);
+		return subsetSum(intArr, intArr.length - 1, sum);
 	}
 	
 	private boolean subsetSum(int[] intArr,int arrLen, int sum) {
@@ -15,11 +15,11 @@ public class SubsetSum {
 		if(arrLen == 0 && sum > 0)
 			return false;
 		
-		if(intArr[arrLen - 1] > sum) {
+		if(intArr[arrLen ] > sum) {
 			return subsetSum(intArr, arrLen-1, sum);
 		}
 		
 		return subsetSum(intArr, arrLen-1, sum) ||  
-	            subsetSum(intArr, arrLen-1, sum-intArr[arrLen-1]); 
+	            subsetSum(intArr, arrLen-1, sum-intArr[arrLen]); 
 	}
 }

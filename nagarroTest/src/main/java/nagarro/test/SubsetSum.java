@@ -27,7 +27,7 @@ public class SubsetSum {
 			}
 		}
 		
-		boolean including = subsetSum(intArr, arrLen - 1, sum);
+		boolean including = subsetSum(intArr, arrLen - 1, sum);  //another way of writing
 		boolean excluding = subsetSum(intArr, arrLen - 1, sum - intArr[arrLen]);
 		
 		//return subsetSum(intArr, arrLen - 1, sum) || subsetSum(intArr, arrLen - 1, sum - intArr[arrLen]);
